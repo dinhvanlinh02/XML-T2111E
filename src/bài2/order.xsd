@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="Orders">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Order" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="OrderNo" type="xs:string" />
+                            <xs:element name="OrderDate" type="xs:string"/>
+                            <xs:element name="Customer" >
+                                <xs:complexType>
+                                    <xs:attribute name="Name" type="xs:string"></xs:attribute>
+                                    <xs:attribute name="Address" type="xs:string"></xs:attribute>
+                                    <xs:attribute name="Email" >
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string"> 
+                                                <xs:pattern value="[^@]+@[^\.]+\..+"/> 
+                                            </xs:restriction> 
+                                        </xs:simpleType>
+                                   
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="Detail" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:attribute name="ItemNo" type="xs:string"></xs:attribute>
+                                    <xs:attribute name="ItemName" type="xs:string"></xs:attribute>
+                                    <xs:attribute name="Quantity" default="1" >
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:decimal" >
+                                                <xs:minInclusive value="1"/>
+                                                <xs:maxInclusive value="100"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="Price" default="0.01" >
+                                        <xs:simpleType >
+                                            <xs:restriction base="xs:decimal" >
+                                                <xs:minExclusive value="0" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

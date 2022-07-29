@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<Orders
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xsi:noNamespaceSchemaLocation='Orders.xsd'>
+    <Order>
+        <OrderNo>DK99</OrderNo>
+        <OrderDate>2022-11-02</OrderDate>
+        <Customer Name="Mai Huy Hoat" Address="Nam Dinh" Email="hoatdfk2001@gmail.com"></Customer>
+        <Detail ItemNo="" ItemName="" Quantity="1" Price="0.01"></Detail>
+    </Order>
+    <Order>
+        <OrderNo>DK89</OrderNo>
+        <OrderDate>2022-10-02</OrderDate>
+        <Customer Name="Tran The Duong" Address="Nam Dinh" Email="duong@gmail.com"></Customer>
+        <Detail ItemNo="" ItemName="" Quantity="1" Price="0.01"></Detail>
+    </Order>
+    <Order>
+        <OrderNo>DHK8</OrderNo>
+        <OrderDate>2022-11-02</OrderDate>
+        <Customer Name="HUNG tro giang" Address="Ha Noi" Email="Hung2001@gmail.com"></Customer>
+        <Detail ItemNo="" ItemName="" Quantity="1" Price="0.01"></Detail>
+    </Order>
+</Orders>

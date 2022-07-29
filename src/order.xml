@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Orders [
+<!ELEMENT Orders (Order*)>
+<!ELEMENT Order (OrderNo,OrderDate,CustomerName,Detail+)>
+<!ELEMENT OrderNo (#PCDATA)>
+<!ELEMENT OrderDate (#PCDATA)>
+<!ELEMENT CustomerName (#PCDATA)>
+ <!ELEMENT Detail (#PCDATA)>
+ <!ATTLIST Detail ItemNo ID #REQUIRED>
+ <!ATTLIST Detail ItemName CDATA  #REQUIRED>
+ <!ATTLIST Detail Quantity CDATA  "1">
+ <!ATTLIST Detail Price CDATA "0">
+]>
+<Orders>
+  <Order>
+    <OrderNo>DHK92</OrderNo>
+    <OrderDate>29-8-1999</OrderDate>
+    <CustomerName>Mai Huy Hoat</CustomerName>
+    <Detail ItemNo="No1" ItemName="dien thoai" Price="99" Quantity="9"></Detail>
+  </Order>
+  <Order>
+    <OrderNo>DHK9282</OrderNo>
+    <OrderDate>29-8-1939</OrderDate>
+    <CustomerName>Mai Huy Hoang</CustomerName>
+    <Detail ItemNo="No2" ItemName="headPhone" Price="2" Quantity="9"></Detail>
+  </Order>
+  <Order>
+    <OrderNo>DHK922</OrderNo>
+    <OrderDate>29-8-299</OrderDate>
+    <CustomerName>Mai Thi Nhat Hang</CustomerName>
+    <Detail ItemNo="No3" ItemName="headPhone phen" Price="2" Quantity="9"></Detail>
+  </Order>
+  <Order>
+    <OrderNo>DHK92</OrderNo>
+    <OrderDate>29-8-2008</OrderDate>
+    <CustomerName>Pham Thi Diem Quynh</CustomerName>
+    <Detail ItemNo="No4" ItemName="denwa Bango" Price="2" Quantity="9"></Detail>
+  </Order>
+  <Order>
+    <OrderNo>DHK2</OrderNo>
+    <OrderDate>29-8-2883</OrderDate>
+    <CustomerName>Tran The Duon</CustomerName>
+    <Detail ItemNo="No5" ItemName="Thien ha" Price="2" Quantity="9"></Detail>
+  </Order>
+</Orders>
